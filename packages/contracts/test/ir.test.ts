@@ -36,6 +36,46 @@ describe("questionIRSchema", () => {
     expect(questionIRSchema.safeParse({ ...example, relation: "x>y" }).success).toBe(false);
   });
 
+  it("relation 元素四角色齐全通过（Task 3 建模规则族结构）", () => {
+    const relation = [
+      { id: "r1", predicate: "diff", subject: "a", reference: "b", target: "d", operator: "-" },
+      {
+        id: "r2",
+        predicate: "times",
+        subject: "a",
+        reference: "b",
+        target: "m",
+        operator: "×",
+        confusable_terms: ["比…多3倍"],
+      },
+    ];
+    expect(questionIRSchema.safeParse({ ...example, relation }).success).toBe(true);
+  });
+
+  it("反例：relation 元素缺 reference（四角色不全）", () => {
+    const relation = [{ id: "r1", predicate: "diff", subject: "a", target: "d", operator: "-" }];
+    expect(questionIRSchema.safeParse({ ...example, relation }).success).toBe(false);
+  });
+
+  it("反例：relation 元素 predicate 越界（MVP 取值 sum/diff/times/share）", () => {
+    const relation = [
+      { id: "r1", predicate: "formula", subject: "a", reference: "b", target: "d", operator: "-" },
+    ];
+    expect(questionIRSchema.safeParse({ ...example, relation }).success).toBe(false);
+  });
+
+  it("反例：relation 元素为开放 record（元素形状不允许透传任意键）", () => {
+    const relation = [{ foo: "bar" }];
+    expect(questionIRSchema.safeParse({ ...example, relation }).success).toBe(false);
+  });
+
+  it("反例：relation 元素 reference 与 target 同一实体", () => {
+    const relation = [
+      { id: "r1", predicate: "diff", subject: "a", reference: "b", target: "b", operator: "-" },
+    ];
+    expect(questionIRSchema.safeParse({ ...example, relation }).success).toBe(false);
+  });
+
   it("IR_SCHEMA_VERSION 与示例 schema_version 一致（1.0.0）", () => {
     expect(IR_SCHEMA_VERSION).toBe(example.schema_version);
   });

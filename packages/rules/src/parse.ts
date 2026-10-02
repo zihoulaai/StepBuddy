@@ -19,8 +19,11 @@ import type { Expr } from "./ast.js";
 import { Rational } from "./rational.js";
 import { ParseError, tokenize, type Token } from "./token.js";
 
-/** 数字 token 文本转 Rational（十进制/分数均在 primary 内落地为精确值） */
-function numberToRational(text: string, pos: number): Rational {
+/**
+ * 数字 token 文本转 Rational（十进制/分数均在 primary 内落地为精确值）。
+ * model 抽取层共用同一实现（小数禁浮点的单一出处）。
+ */
+export function numberToRational(text: string, pos = 0): Rational {
   if (text.includes("/")) {
     const [num, den] = text.split("/");
     try {

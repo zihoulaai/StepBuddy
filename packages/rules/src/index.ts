@@ -32,3 +32,33 @@ export {
   type StepInvariantResult,
   type StepLike,
 } from "./invariants.js";
+
+// 关系层建模（Task 3：01 §3.1/§4.0/§4.4/§5、02 §3.2/§5/§129；
+// 中间结构 Extraction 即 Task 6 LLM 结构化的交换格式，LLM 产出同构结构后走同一 applyRules）
+export {
+  ALL_MODEL_RULES,
+  applyRules,
+  extract,
+  modelQuestion,
+  synthesize,
+  COMPARISON_RELATIONS,
+  MULTIPLE_RATIO,
+  MULTIPLE_TIMES,
+  NORMALIZE_UNIT,
+  SUMDIFF_DIFF,
+  SUMDIFF_SUM,
+  TOTAL_TOTAL,
+  VARIABLE_NAME,
+  type ComparisonClause,
+  type ComparisonRelation,
+  type ExtractedEntity,
+  type ExtractedQuantity,
+  type Extraction,
+  type ModelEntity,
+  type ModelRelation,
+  type ModelResult,
+  type ModelRule,
+  type ModelingError,
+  type RelationModel,
+  type RuleDraft,
+} from "./model/index.js";
