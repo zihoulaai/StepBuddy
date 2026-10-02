@@ -62,3 +62,35 @@ export {
   type RelationModel,
   type RuleDraft,
 } from "./model/index.js";
+
+// 解题空间生成（Task 4：01 §4.0/§5、spec.md §2.1 M4；
+// 方程适配器只消费规则引擎生成的规范方程，学生表达式仍走严格 parse）
+export {
+  BUDGET_TIERS,
+  budgetFor,
+  DEFAULT_SPACE_BUDGET,
+  EQ_EVAL,
+  EQ_ISOLATE,
+  EQ_MERGE,
+  EQ_MOVE,
+  EQ_TRANSFORMS,
+  equationKey,
+  generateSolutionSpace,
+  isEquationParseFailure,
+  normalizeSides,
+  parseEquation,
+  renderEquation,
+  type BudgetTierId,
+  type EquationParseFailure,
+  type EquationSides,
+  type EquationTransform,
+  type ParseEquationResult,
+  type SolutionEdge,
+  type SolutionNode,
+  type SolutionSpace,
+  type SolutionSpaceResult,
+  type SolutionValue,
+  type SpaceBudget,
+  type SpaceTruncation,
+  type SpaceTruncationFlag,
+} from "./space/index.js";
