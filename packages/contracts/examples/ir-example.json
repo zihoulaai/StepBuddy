@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "question_type": "fraction_arith",
+  "grade_band": "G5",
+  "entity": {
+    "entities": [
+      { "id": "n1", "role": "known", "name": "被乘数", "value": { "num": 1, "den": 2 } },
+      { "id": "n2", "role": "known", "name": "乘数", "value": { "num": 2, "den": 3 } },
+      { "id": "n3", "role": "known", "name": "被加项", "value": { "num": 3, "den": 4 } }
+    ]
+  },
+  "target": { "type": "value", "answer_form": "fraction" },
+  "constraint": { "require_simplest_form": true },
+  "steps": [
+    {
+      "index": 1,
+      "raw_text": "1/2 x 2/3 = 2/3",
+      "expr_before": "1/2 * 2/3",
+      "expr_after": "2/3",
+      "split_checked": true,
+      "source": "photo",
+      "answer_only": false
+    },
+    {
+      "index": 2,
+      "raw_text": "3/4 + 2/3 = 9/12 + 8/12 = 17/12",
+      "expr_before": "3/4 + 2/3",
+      "expr_after": "17/12",
+      "split_checked": false,
+      "source": "photo",
+      "answer_only": false
+    }
+  ]
+}

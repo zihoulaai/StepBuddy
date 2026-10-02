@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "result_id": "r-00137",
+  "versions": {
+    "ir_schema_version": "1.0.0",
+    "rule_lib_version": "0.4.2",
+    "model_version": "locked-20260930",
+    "prompt_template_version": "tpl-2.1"
+  },
+  "verdict": "incorrect",
+  "confidence": 0.86,
+  "steps": [
+    {
+      "index": 1,
+      "status": "incorrect",
+      "cost": 0.31,
+      "transforms": [
+        { "rule_id": "NUM.FRAC.MUL", "status": "violated", "evidence": "只乘了其中一个因数" }
+      ],
+      "error": {
+        "role": "source",
+        "classification": "behavioral",
+        "subtype": "miscalc",
+        "rule_id": "NUM.FRAC.MUL",
+        "location": { "span": "1/2 * 2/3", "hint": "第二个因数未参与相乘" },
+        "reason": "分数乘法要把两个分数的分子相乘、分母相乘，这一步只处理了其中一个",
+        "traceable": true
+      }
+    },
+    { "index": 2, "status": "inherited", "equivalence_level": "strict", "cost": 0.12 }
+  ],
+  "source_error": {
+    "step_index": 1,
+    "classification": "behavioral",
+    "rule_id": "NUM.FRAC.MUL",
+    "reason": "分数乘法要把两个分数的分子相乘、分母相乘，这一步只处理了其中一个"
+  },
+  "knowledge_points": ["FRAC.MUL", "FRAC.ADD", "NUM.LCM"]
+}

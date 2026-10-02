@@ -1,0 +1,16 @@
+{
+  "name": "@stepbuddy/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@stepbuddy/contracts": "*",
+    "@stepbuddy/rules": "*"
+  }
+}
