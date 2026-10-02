@@ -1,0 +1,7 @@
+# IDE 数据（CodeBuddy 工作区数据，不纳入版本管理）
+.codebuddy/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
