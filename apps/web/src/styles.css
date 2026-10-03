@@ -1,0 +1,353 @@
+/**
+ * 小算星 MVP 样式（Task 8）：手写最小样式，无 CSS 框架。
+ * 桌面浏览器优先（任务书），单栏 max-width 760px 居中，语义徽标四色。
+ */
+
+:root {
+  --color-text: #1f2933;
+  --color-muted: #6b7280;
+  --color-border: #d7dce2;
+  --color-bg: #f6f7f9;
+  --color-card: #ffffff;
+  --color-correct: #166534;
+  --color-correct-bg: #dcfce7;
+  --color-incorrect: #991b1b;
+  --color-incorrect-bg: #fee2e2;
+  --color-inherited: #92400e;
+  --color-inherited-bg: #fef3c7;
+  --color-not-judged: #4b5563;
+  --color-not-judged-bg: #e5e7eb;
+  --color-partial: #1e40af;
+  --color-partial-bg: #dbeafe;
+  --color-unknown: #4b5563;
+  --color-unknown-bg: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+.workbench {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: 15px;
+  margin: 20px 0 8px;
+  color: var(--color-muted);
+}
+
+/* 录入表单 */
+
+.diagnose-form {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+textarea {
+  font: inherit;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.source-field {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.source-field legend {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0 4px;
+}
+
+.source-field label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.field-hint {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.diagnose-form button {
+  align-self: flex-start;
+  font: inherit;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #1d4ed8;
+  color: #fff;
+  cursor: pointer;
+}
+
+.diagnose-form button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* 结果区 */
+
+.result-area {
+  margin-top: 16px;
+}
+
+.empty-hint {
+  color: var(--color-muted);
+  text-align: center;
+  padding: 32px 0;
+}
+
+.result-panel {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.result-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.verdict {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 999px;
+}
+
+.verdict-correct {
+  color: var(--color-correct);
+  background: var(--color-correct-bg);
+}
+
+.verdict-incorrect {
+  color: var(--color-incorrect);
+  background: var(--color-incorrect-bg);
+}
+
+.verdict-partial {
+  color: var(--color-partial);
+  background: var(--color-partial-bg);
+}
+
+.verdict-unknown {
+  color: var(--color-unknown);
+  background: var(--color-unknown-bg);
+}
+
+.result-id {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.banner {
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  margin: 12px 0 0;
+}
+
+.banner-fail {
+  background: var(--color-incorrect-bg);
+  color: var(--color-incorrect);
+  border: 1px solid #fca5a5;
+}
+
+.banner-info {
+  background: var(--color-not-judged-bg);
+  color: var(--color-not-judged);
+  border: 1px solid var(--color-border);
+}
+
+.source-error {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--color-incorrect);
+  background: #fef2f2;
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+}
+
+.source-error p {
+  margin: 2px 0;
+}
+
+/* 步骤卡片 */
+
+.step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.step-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.step-index {
+  font-weight: 600;
+}
+
+.step-meta {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.badge {
+  font-size: 12px;
+  padding: 1px 8px;
+  border-radius: 999px;
+}
+
+.badge-correct {
+  color: var(--color-correct);
+  background: var(--color-correct-bg);
+}
+
+.badge-incorrect {
+  color: var(--color-incorrect);
+  background: var(--color-incorrect-bg);
+}
+
+.badge-inherited {
+  color: var(--color-inherited);
+  background: var(--color-inherited-bg);
+}
+
+.badge-not_judged {
+  color: var(--color-not-judged);
+  background: var(--color-not-judged-bg);
+}
+
+.step-error {
+  margin-top: 8px;
+  border-top: 1px dashed var(--color-border);
+  padding-top: 8px;
+}
+
+.step-error p {
+  margin: 2px 0;
+}
+
+.error-classification {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.error-location {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.error-reason {
+  font-size: 14px;
+}
+
+.untraceable-tag {
+  margin-left: 8px;
+  font-size: 12px;
+  color: var(--color-inherited);
+  background: var(--color-inherited-bg);
+  padding: 1px 8px;
+  border-radius: 999px;
+}
+
+/* 正确路径与 teaching */
+
+.recommended-path {
+  margin: 0;
+  padding-left: 24px;
+  font-size: 14px;
+}
+
+.recommended-path li {
+  margin: 2px 0;
+}
+
+.teaching-notes {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.teaching-notes p {
+  margin: 2px 0;
+}
+
+/* 复核信息 */
+
+.replay-info dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 2px 16px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.replay-info dt {
+  color: var(--color-muted);
+}
+
+.replay-info dd {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
