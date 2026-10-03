@@ -40,6 +40,14 @@ function attempt(code: LlmErrorCode, message: string, n: number): LlmAttempt {
   return { code, message, attempt: n };
 }
 
+/**
+ * env 驱动的默认 client 构造抽点（Task 7：HTTP 路由默认 provider；
+ * 测试经 createApiServer({ clientProvider }) 注入替换，不触网）。
+ */
+export function createClientFromEnv(): LlmClient {
+  return createFetchClient();
+}
+
 export function createFetchClient(options: FetchClientOptions = {}): LlmClient {
   const doFetch = options.fetchImpl ?? fetch;
   const sleep =

@@ -19,6 +19,14 @@ export type LlmRole = "system" | "user";
 
 export type LlmMessage = { role: LlmRole; content: string };
 
+/**
+ * 结构化失败退出码（01 §5；Task 7 决策 D1 三分支）：
+ * - UNPARSABLE_INPUT：内容 3 轮未过 schema 校验（识别三次仍失败）；
+ * - MODEL_FAILED：规则层不适用（应用题专属）；
+ * - DEPENDENCY_UNAVAILABLE：token 预算超 / 传输层失败（系统类）。
+ */
+export type StructureExitCode = "UNPARSABLE_INPUT" | "MODEL_FAILED" | "DEPENDENCY_UNAVAILABLE";
+
 /** temperature 类型级钉死为 0：零温度不可被调用方放宽（tasks.md 6.1） */
 export type LlmRequest = {
   model: string;

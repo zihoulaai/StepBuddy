@@ -21,6 +21,7 @@ export {
   type LlmResult,
   type LlmRole,
   type StepExplanation,
+  type StructureExitCode,
 } from "./types.js";
 
 export {
@@ -51,7 +52,11 @@ export {
   type ExtractionDto,
 } from "./schema.js";
 
-export { createFetchClient, type FetchClientOptions } from "./client.js";
+export {
+  createClientFromEnv,
+  createFetchClient,
+  type FetchClientOptions,
+} from "./client.js";
 
 export {
   parseExtractionContent,
