@@ -1,0 +1,3751 @@
+{
+  "sampled": 30,
+  "passRate": {
+    "consistent": 30,
+    "total": 30,
+    "rate": 1
+  },
+  "cards": [
+    {
+      "case": {
+        "id": "eval-044",
+        "family": "sumdiff",
+        "group": "sumdiff_group",
+        "difficulty": "easy",
+        "question_text": "小猫和小狗一共110只，小猫比小狗多10只，求小猫和小狗",
+        "student_steps": [
+          "x+10+x=110",
+          "2*x-10=110"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "小猫",
+                "role": "unknown"
+              },
+              {
+                "name": "小狗",
+                "role": "unknown"
+              },
+              {
+                "name": "总量",
+                "role": "known",
+                "value": {
+                  "num": 110,
+                  "den": 1
+                },
+                "unit": "只"
+              },
+              {
+                "name": "差量",
+                "role": "known",
+                "value": {
+                  "num": 10,
+                  "den": 1
+                },
+                "unit": "只"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "小猫",
+                "reference": "小狗",
+                "predicate": "sum",
+                "operator": "+",
+                "target": "总量"
+              },
+              {
+                "subject": "小猫",
+                "reference": "小狗",
+                "predicate": "diff",
+                "operator": "-",
+                "target": "差量"
+              }
+            ],
+            "targets": [
+              "小猫",
+              "小狗"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 2,
+            "classification": "knowledge",
+            "rule_id": "ALG.EQ.MOVE"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-044",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "incorrect",
+            "error": {
+              "classification": "knowledge",
+              "ruleId": "ALG.EQ.MOVE"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "小狗|unknown|-|-",
+            "小猫|unknown|-|-",
+            "差量|known|10/1|只",
+            "总量|known|110/1|只"
+          ],
+          "relations": [
+            "小猫 diff 小狗 - 差量",
+            "小猫 sum 小狗 + 总量"
+          ],
+          "targets": [
+            "小狗",
+            "小猫"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-044",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 2,
+          "denominator": 2
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-050",
+        "family": "sumdiff",
+        "group": "sumdiff_group",
+        "difficulty": "easy",
+        "question_text": "小猫和小狗一共110只，小猫比小狗少10只，求小猫和小狗",
+        "student_steps": [
+          "x+10+x=110",
+          "2*x-10=110"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "小猫",
+                "role": "unknown"
+              },
+              {
+                "name": "小狗",
+                "role": "unknown"
+              },
+              {
+                "name": "总量",
+                "role": "known",
+                "value": {
+                  "num": 110,
+                  "den": 1
+                },
+                "unit": "只"
+              },
+              {
+                "name": "差量",
+                "role": "known",
+                "value": {
+                  "num": 10,
+                  "den": 1
+                },
+                "unit": "只"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "小猫",
+                "reference": "小狗",
+                "predicate": "sum",
+                "operator": "+",
+                "target": "总量"
+              },
+              {
+                "subject": "小狗",
+                "reference": "小猫",
+                "predicate": "diff",
+                "operator": "-",
+                "target": "差量"
+              }
+            ],
+            "targets": [
+              "小猫",
+              "小狗"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 2,
+            "classification": "knowledge",
+            "rule_id": "ALG.EQ.MOVE"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-050",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "incorrect",
+            "error": {
+              "classification": "knowledge",
+              "ruleId": "ALG.EQ.MOVE"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "小狗|unknown|-|-",
+            "小猫|unknown|-|-",
+            "差量|known|10/1|只",
+            "总量|known|110/1|只"
+          ],
+          "relations": [
+            "小狗 diff 小猫 - 差量",
+            "小猫 sum 小狗 + 总量"
+          ],
+          "targets": [
+            "小狗",
+            "小猫"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-050",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 2,
+          "denominator": 2
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-052",
+        "family": "sumdiff",
+        "group": "sumdiff_group",
+        "difficulty": "easy",
+        "question_text": "故事书和科技书一共115本，故事书比科技书少25本，求故事书和科技书",
+        "student_steps": [
+          "x+25+x=115",
+          "2*x-25=115"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "故事书",
+                "role": "unknown"
+              },
+              {
+                "name": "科技书",
+                "role": "unknown"
+              },
+              {
+                "name": "总量",
+                "role": "known",
+                "value": {
+                  "num": 115,
+                  "den": 1
+                },
+                "unit": "本"
+              },
+              {
+                "name": "差量",
+                "role": "known",
+                "value": {
+                  "num": 25,
+                  "den": 1
+                },
+                "unit": "本"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "故事书",
+                "reference": "科技书",
+                "predicate": "sum",
+                "operator": "+",
+                "target": "总量"
+              },
+              {
+                "subject": "科技书",
+                "reference": "故事书",
+                "predicate": "diff",
+                "operator": "-",
+                "target": "差量"
+              }
+            ],
+            "targets": [
+              "故事书",
+              "科技书"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 2,
+            "classification": "knowledge",
+            "rule_id": "ALG.EQ.MOVE"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-052",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "incorrect",
+            "error": {
+              "classification": "knowledge",
+              "ruleId": "ALG.EQ.MOVE"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "差量|known|25/1|本",
+            "总量|known|115/1|本",
+            "故事书|unknown|-|-",
+            "科技书|unknown|-|-"
+          ],
+          "relations": [
+            "故事书 sum 科技书 + 总量",
+            "科技书 diff 故事书 - 差量"
+          ],
+          "targets": [
+            "故事书",
+            "科技书"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-052",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 2,
+          "denominator": 2
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-057",
+        "family": "sumdiff",
+        "group": "sumdiff_group",
+        "difficulty": "easy",
+        "question_text": "红笔有35支，红笔比蓝笔少10支，求蓝笔",
+        "student_steps": [
+          "x=35-10"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "红笔",
+                "role": "known",
+                "value": {
+                  "num": 35,
+                  "den": 1
+                },
+                "unit": "支"
+              },
+              {
+                "name": "蓝笔",
+                "role": "unknown"
+              },
+              {
+                "name": "差量",
+                "role": "known",
+                "value": {
+                  "num": 10,
+                  "den": 1
+                },
+                "unit": "支"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "蓝笔",
+                "reference": "红笔",
+                "predicate": "diff",
+                "operator": "-",
+                "target": "差量"
+              }
+            ],
+            "targets": [
+              "蓝笔"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 1,
+            "classification": "knowledge"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-057",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "incorrect",
+            "error": {
+              "classification": "knowledge"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "差量|known|10/1|支",
+            "红笔|known|35/1|支",
+            "蓝笔|unknown|-|-"
+          ],
+          "relations": [
+            "蓝笔 diff 红笔 - 差量"
+          ],
+          "targets": [
+            "蓝笔"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-057",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-058",
+        "family": "sumdiff",
+        "group": "sumdiff_group",
+        "difficulty": "easy",
+        "question_text": "故事书有45本，故事书比科技书少25本，求科技书",
+        "student_steps": [
+          "x=45-25"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "故事书",
+                "role": "known",
+                "value": {
+                  "num": 45,
+                  "den": 1
+                },
+                "unit": "本"
+              },
+              {
+                "name": "科技书",
+                "role": "unknown"
+              },
+              {
+                "name": "差量",
+                "role": "known",
+                "value": {
+                  "num": 25,
+                  "den": 1
+                },
+                "unit": "本"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "科技书",
+                "reference": "故事书",
+                "predicate": "diff",
+                "operator": "-",
+                "target": "差量"
+              }
+            ],
+            "targets": [
+              "科技书"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 1,
+            "classification": "knowledge"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-058",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "incorrect",
+            "error": {
+              "classification": "knowledge"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "差量|known|25/1|本",
+            "故事书|known|45/1|本",
+            "科技书|unknown|-|-"
+          ],
+          "relations": [
+            "科技书 diff 故事书 - 差量"
+          ],
+          "targets": [
+            "科技书"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-058",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-067",
+        "family": "multiple",
+        "group": "sumdiff_group",
+        "difficulty": "easy",
+        "question_text": "篮球是足球的4倍，篮球和足球一共100个，求篮球足球",
+        "student_steps": [
+          "4*x-x=100"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "篮球",
+                "role": "unknown"
+              },
+              {
+                "name": "足球",
+                "role": "unknown"
+              },
+              {
+                "name": "倍数",
+                "role": "known",
+                "value": {
+                  "num": 4,
+                  "den": 1
+                }
+              },
+              {
+                "name": "总量",
+                "role": "known",
+                "value": {
+                  "num": 100,
+                  "den": 1
+                },
+                "unit": "个"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "篮球",
+                "reference": "足球",
+                "predicate": "times",
+                "operator": "×",
+                "target": "倍数"
+              },
+              {
+                "subject": "篮球",
+                "reference": "足球",
+                "predicate": "sum",
+                "operator": "+",
+                "target": "总量"
+              }
+            ],
+            "targets": [
+              "篮球",
+              "足球"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 1,
+            "classification": "knowledge"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-067",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "incorrect",
+            "error": {
+              "classification": "knowledge"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "倍数|known|4/1|-",
+            "总量|known|100/1|个",
+            "篮球|unknown|-|-",
+            "足球|unknown|-|-"
+          ],
+          "relations": [
+            "篮球 sum 足球 + 总量",
+            "篮球 times 足球 × 倍数"
+          ],
+          "targets": [
+            "篮球",
+            "足球"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-067",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-075",
+        "family": "multiple",
+        "group": "sumdiff_group",
+        "difficulty": "easy",
+        "question_text": "红笔是蓝笔的3倍，蓝笔有25支，求红笔",
+        "student_steps": [
+          "x=3*25",
+          "x=75支"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "红笔",
+                "role": "unknown"
+              },
+              {
+                "name": "蓝笔",
+                "role": "known",
+                "value": {
+                  "num": 25,
+                  "den": 1
+                },
+                "unit": "支"
+              },
+              {
+                "name": "倍数",
+                "role": "known",
+                "value": {
+                  "num": 3,
+                  "den": 1
+                }
+              }
+            ],
+            "relations": [
+              {
+                "subject": "红笔",
+                "reference": "蓝笔",
+                "predicate": "times",
+                "operator": "×",
+                "target": "倍数"
+              }
+            ],
+            "targets": [
+              "红笔"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 2,
+            "classification": "normative"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-075",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "incorrect",
+            "error": {
+              "classification": "normative"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "倍数|known|3/1|-",
+            "红笔|unknown|-|-",
+            "蓝笔|known|25/1|支"
+          ],
+          "relations": [
+            "红笔 times 蓝笔 × 倍数"
+          ],
+          "targets": [
+            "红笔"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-075",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 2,
+          "denominator": 2
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-081",
+        "family": "multiple",
+        "group": "sumdiff_group",
+        "difficulty": "medium",
+        "question_text": "红笔比蓝笔的4倍少12支，红笔和蓝笔一共78支，求红笔蓝笔",
+        "student_steps": [
+          "4*x-12+x=78",
+          "5*x+12=78"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "红笔",
+                "role": "unknown"
+              },
+              {
+                "name": "蓝笔",
+                "role": "unknown"
+              },
+              {
+                "name": "蓝笔的4倍",
+                "role": "unknown"
+              },
+              {
+                "name": "倍数",
+                "role": "known",
+                "value": {
+                  "num": 4,
+                  "den": 1
+                }
+              },
+              {
+                "name": "差量",
+                "role": "known",
+                "value": {
+                  "num": 12,
+                  "den": 1
+                },
+                "unit": "支"
+              },
+              {
+                "name": "总量",
+                "role": "known",
+                "value": {
+                  "num": 78,
+                  "den": 1
+                },
+                "unit": "支"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "红笔",
+                "reference": "蓝笔",
+                "predicate": "times",
+                "operator": "×",
+                "target": "倍数"
+              },
+              {
+                "subject": "蓝笔的4倍",
+                "reference": "红笔",
+                "predicate": "diff",
+                "operator": "-",
+                "target": "差量"
+              },
+              {
+                "subject": "红笔",
+                "reference": "蓝笔",
+                "predicate": "sum",
+                "operator": "+",
+                "target": "总量"
+              }
+            ],
+            "targets": [
+              "红笔",
+              "蓝笔"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 2,
+            "classification": "knowledge",
+            "rule_id": "ALG.EQ.MOVE"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-081",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "incorrect",
+            "error": {
+              "classification": "knowledge",
+              "ruleId": "ALG.EQ.MOVE"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "倍数|known|4/1|-",
+            "差量|known|12/1|支",
+            "总量|known|78/1|支",
+            "红笔|unknown|-|-",
+            "蓝笔|unknown|-|-",
+            "蓝笔的4倍|unknown|-|-"
+          ],
+          "relations": [
+            "红笔 sum 蓝笔 + 总量",
+            "红笔 times 蓝笔 × 倍数",
+            "蓝笔的4倍 diff 红笔 - 差量"
+          ],
+          "targets": [
+            "红笔",
+            "蓝笔"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-081",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 2,
+          "denominator": 2
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-084",
+        "family": "multiple",
+        "group": "sumdiff_group",
+        "difficulty": "medium",
+        "question_text": "苹果是橘子的5/6，苹果和橘子一共88个，求苹果橘子",
+        "student_steps": [
+          "5/6*x+x=88",
+          "11/6*x=88",
+          "x=88/(11/6)",
+          "x=47"
+        ],
+        "source": "manual",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "苹果",
+                "role": "unknown"
+              },
+              {
+                "name": "橘子",
+                "role": "unknown"
+              },
+              {
+                "name": "倍数",
+                "role": "known",
+                "value": {
+                  "num": 5,
+                  "den": 6
+                }
+              },
+              {
+                "name": "总量",
+                "role": "known",
+                "value": {
+                  "num": 88,
+                  "den": 1
+                },
+                "unit": "个"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "苹果",
+                "reference": "橘子",
+                "predicate": "times",
+                "operator": "×",
+                "target": "倍数"
+              },
+              {
+                "subject": "苹果",
+                "reference": "橘子",
+                "predicate": "sum",
+                "operator": "+",
+                "target": "总量"
+              }
+            ],
+            "targets": [
+              "苹果",
+              "橘子"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "correct"
+            },
+            {
+              "index": 3,
+              "status": "correct"
+            },
+            {
+              "index": 4,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 4,
+            "classification": "behavioral",
+            "subtype": "miscalc"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-084",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "correct"
+          },
+          {
+            "index": 3,
+            "status": "correct"
+          },
+          {
+            "index": 4,
+            "status": "incorrect",
+            "error": {
+              "classification": "behavioral",
+              "subtype": "miscalc"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "倍数|known|5/6|-",
+            "总量|known|88/1|个",
+            "橘子|unknown|-|-",
+            "苹果|unknown|-|-"
+          ],
+          "relations": [
+            "苹果 sum 橘子 + 总量",
+            "苹果 times 橘子 × 倍数"
+          ],
+          "targets": [
+            "橘子",
+            "苹果"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-084",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 4,
+          "denominator": 4
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-094",
+        "family": "total",
+        "group": "normalize_group",
+        "difficulty": "medium",
+        "question_text": "每层16本，20层一共多少本",
+        "student_steps": [
+          "x=16*20",
+          "x=319"
+        ],
+        "source": "manual",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "每份量",
+                "role": "known",
+                "value": {
+                  "num": 16,
+                  "den": 1
+                },
+                "unit": "本"
+              },
+              {
+                "name": "份数",
+                "role": "known",
+                "value": {
+                  "num": 20,
+                  "den": 1
+                }
+              },
+              {
+                "name": "总量",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "总量",
+                "reference": "每份量",
+                "predicate": "share",
+                "operator": "×",
+                "target": "份数"
+              }
+            ],
+            "targets": [
+              "总量"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 2,
+            "classification": "behavioral",
+            "subtype": "miscalc"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-094",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "incorrect",
+            "error": {
+              "classification": "behavioral",
+              "subtype": "miscalc"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|known|20/1|-",
+            "总量|unknown|-|-",
+            "每份量|known|16/1|本"
+          ],
+          "relations": [
+            "总量 share 每份量 × 份数"
+          ],
+          "targets": [
+            "总量"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-094",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 2,
+          "denominator": 2
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-099",
+        "family": "total",
+        "group": "normalize_group",
+        "difficulty": "medium",
+        "question_text": "每小时行65千米，12小时行多少千米",
+        "student_steps": [
+          "x=65*12",
+          "x=786"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "每份量",
+                "role": "known",
+                "value": {
+                  "num": 65,
+                  "den": 1
+                },
+                "unit": "千米"
+              },
+              {
+                "name": "份数",
+                "role": "known",
+                "value": {
+                  "num": 12,
+                  "den": 1
+                }
+              },
+              {
+                "name": "总量",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "总量",
+                "reference": "每份量",
+                "predicate": "share",
+                "operator": "×",
+                "target": "份数"
+              }
+            ],
+            "targets": [
+              "总量"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 2,
+            "classification": "behavioral",
+            "subtype": "slip"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-099",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "incorrect",
+            "error": {
+              "classification": "behavioral",
+              "subtype": "slip"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|known|12/1|-",
+            "总量|unknown|-|-",
+            "每份量|known|65/1|千米"
+          ],
+          "relations": [
+            "总量 share 每份量 × 份数"
+          ],
+          "targets": [
+            "总量"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-099",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 2,
+          "denominator": 2
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-104",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "medium",
+        "question_text": "9小时行720千米，每小时行多少千米",
+        "student_steps": [
+          "x=720/9",
+          "x=86"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 720,
+                  "den": 1
+                },
+                "unit": "千米"
+              },
+              {
+                "name": "每份量",
+                "role": "unknown"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 9,
+                  "den": 1
+                }
+              }
+            ],
+            "relations": [
+              {
+                "subject": "每份量",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "已知份数"
+              }
+            ],
+            "targets": [
+              "每份量"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 2,
+            "classification": "behavioral",
+            "subtype": "slip"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-104",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "incorrect",
+            "error": {
+              "classification": "behavioral",
+              "subtype": "slip"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "已知份数|known|9/1|-",
+            "已知总量|known|720/1|千米",
+            "每份量|unknown|-|-"
+          ],
+          "relations": [
+            "每份量 share 已知总量 ÷ 已知份数"
+          ],
+          "targets": [
+            "每份量"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-104",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 2,
+          "denominator": 2
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-106",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "medium",
+        "question_text": "6小时行510千米，每小时行多少千米",
+        "student_steps": [
+          "x=510/6",
+          "x=86"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 510,
+                  "den": 1
+                },
+                "unit": "千米"
+              },
+              {
+                "name": "每份量",
+                "role": "unknown"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 6,
+                  "den": 1
+                }
+              }
+            ],
+            "relations": [
+              {
+                "subject": "每份量",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "已知份数"
+              }
+            ],
+            "targets": [
+              "每份量"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 2,
+            "classification": "behavioral",
+            "subtype": "slip"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "eval-106",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "incorrect",
+            "error": {
+              "classification": "behavioral",
+              "subtype": "slip"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "已知份数|known|6/1|-",
+            "已知总量|known|510/1|千米",
+            "每份量|unknown|-|-"
+          ],
+          "relations": [
+            "每份量 share 已知总量 ÷ 已知份数"
+          ],
+          "targets": [
+            "每份量"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-106",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 2,
+          "denominator": 2
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-113",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "medium",
+        "question_text": "5小时行225千米，每小时行多少千米",
+        "student_steps": [
+          "x=225/5",
+          "所以结果直接写出来"
+        ],
+        "source": "manual",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 225,
+                  "den": 1
+                },
+                "unit": "千米"
+              },
+              {
+                "name": "每份量",
+                "role": "unknown"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 5,
+                  "den": 1
+                }
+              }
+            ],
+            "relations": [
+              {
+                "subject": "每份量",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "已知份数"
+              }
+            ],
+            "targets": [
+              "每份量"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "not_judged"
+            }
+          ]
+        },
+        "excluded": "invalid_expr"
+      },
+      "outcome": {
+        "caseId": "eval-113",
+        "modeling": "ok",
+        "verdict": "partial",
+        "fallbackExitCode": "INVALID_EXPR",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "not_judged"
+          }
+        ],
+        "model": {
+          "entities": [
+            "已知份数|known|5/1|-",
+            "已知总量|known|225/1|千米",
+            "每份量|unknown|-|-"
+          ],
+          "relations": [
+            "每份量 share 已知总量 ÷ 已知份数"
+          ],
+          "targets": [
+            "每份量"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-113",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-114",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "medium",
+        "question_text": "4袋重60千克，6袋重多少千克",
+        "student_steps": [
+          "x=60/4*6",
+          "所以结果直接写出来"
+        ],
+        "source": "manual",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 60,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 4,
+                  "den": 1
+                }
+              },
+              {
+                "name": "每份量",
+                "role": "unknown"
+              },
+              {
+                "name": "份数",
+                "role": "known",
+                "value": {
+                  "num": 6,
+                  "den": 1
+                }
+              },
+              {
+                "name": "总量",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "每份量",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "已知份数"
+              },
+              {
+                "subject": "总量",
+                "reference": "每份量",
+                "predicate": "share",
+                "operator": "×",
+                "target": "份数"
+              }
+            ],
+            "targets": [
+              "总量"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "not_judged"
+            }
+          ]
+        },
+        "excluded": "invalid_expr"
+      },
+      "outcome": {
+        "caseId": "eval-114",
+        "modeling": "ok",
+        "verdict": "partial",
+        "fallbackExitCode": "INVALID_EXPR",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "not_judged"
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|known|6/1|-",
+            "已知份数|known|4/1|-",
+            "已知总量|known|60/1|千克",
+            "总量|unknown|-|-",
+            "每份量|unknown|-|-"
+          ],
+          "relations": [
+            "总量 share 每份量 × 份数",
+            "每份量 share 已知总量 ÷ 已知份数"
+          ],
+          "targets": [
+            "总量"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-114",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-115",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "medium",
+        "question_text": "5车重90吨，7车重多少吨",
+        "student_steps": [
+          "x=90/5*7"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 90,
+                  "den": 1
+                },
+                "unit": "吨"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 5,
+                  "den": 1
+                }
+              },
+              {
+                "name": "每份量",
+                "role": "unknown"
+              },
+              {
+                "name": "份数",
+                "role": "known",
+                "value": {
+                  "num": 7,
+                  "den": 1
+                }
+              },
+              {
+                "name": "总量",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "每份量",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "已知份数"
+              },
+              {
+                "subject": "总量",
+                "reference": "每份量",
+                "predicate": "share",
+                "operator": "×",
+                "target": "份数"
+              }
+            ],
+            "targets": [
+              "总量"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "eval-115",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|known|7/1|-",
+            "已知份数|known|5/1|-",
+            "已知总量|known|90/1|吨",
+            "总量|unknown|-|-",
+            "每份量|unknown|-|-"
+          ],
+          "relations": [
+            "总量 share 每份量 × 份数",
+            "每份量 share 已知总量 ÷ 已知份数"
+          ],
+          "targets": [
+            "总量"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-115",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-116",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "medium",
+        "question_text": "4筐重84千克，8筐重多少千克",
+        "student_steps": [
+          "x=84/4*8"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 84,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 4,
+                  "den": 1
+                }
+              },
+              {
+                "name": "每份量",
+                "role": "unknown"
+              },
+              {
+                "name": "份数",
+                "role": "known",
+                "value": {
+                  "num": 8,
+                  "den": 1
+                }
+              },
+              {
+                "name": "总量",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "每份量",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "已知份数"
+              },
+              {
+                "subject": "总量",
+                "reference": "每份量",
+                "predicate": "share",
+                "operator": "×",
+                "target": "份数"
+              }
+            ],
+            "targets": [
+              "总量"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "eval-116",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|known|8/1|-",
+            "已知份数|known|4/1|-",
+            "已知总量|known|84/1|千克",
+            "总量|unknown|-|-",
+            "每份量|unknown|-|-"
+          ],
+          "relations": [
+            "总量 share 每份量 × 份数",
+            "每份量 share 已知总量 ÷ 已知份数"
+          ],
+          "targets": [
+            "总量"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-116",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-121",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "medium",
+        "question_text": "3箱重39千克，7箱重多少千克",
+        "student_steps": [
+          "x=39/3*7"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 39,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 3,
+                  "den": 1
+                }
+              },
+              {
+                "name": "每份量",
+                "role": "unknown"
+              },
+              {
+                "name": "份数",
+                "role": "known",
+                "value": {
+                  "num": 7,
+                  "den": 1
+                }
+              },
+              {
+                "name": "总量",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "每份量",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "已知份数"
+              },
+              {
+                "subject": "总量",
+                "reference": "每份量",
+                "predicate": "share",
+                "operator": "×",
+                "target": "份数"
+              }
+            ],
+            "targets": [
+              "总量"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "eval-121",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|known|7/1|-",
+            "已知份数|known|3/1|-",
+            "已知总量|known|39/1|千克",
+            "总量|unknown|-|-",
+            "每份量|unknown|-|-"
+          ],
+          "relations": [
+            "总量 share 每份量 × 份数",
+            "每份量 share 已知总量 ÷ 已知份数"
+          ],
+          "targets": [
+            "总量"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-121",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-122",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "medium",
+        "question_text": "4袋重100千克，9袋重多少千克",
+        "student_steps": [
+          "x=100/4*9"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 100,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 4,
+                  "den": 1
+                }
+              },
+              {
+                "name": "每份量",
+                "role": "unknown"
+              },
+              {
+                "name": "份数",
+                "role": "known",
+                "value": {
+                  "num": 9,
+                  "den": 1
+                }
+              },
+              {
+                "name": "总量",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "每份量",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "已知份数"
+              },
+              {
+                "subject": "总量",
+                "reference": "每份量",
+                "predicate": "share",
+                "operator": "×",
+                "target": "份数"
+              }
+            ],
+            "targets": [
+              "总量"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "eval-122",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|known|9/1|-",
+            "已知份数|known|4/1|-",
+            "已知总量|known|100/1|千克",
+            "总量|unknown|-|-",
+            "每份量|unknown|-|-"
+          ],
+          "relations": [
+            "总量 share 每份量 × 份数",
+            "每份量 share 已知总量 ÷ 已知份数"
+          ],
+          "targets": [
+            "总量"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-122",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-130",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "hard",
+        "question_text": "6袋重204千克，13袋重多少千克",
+        "student_steps": [
+          "x=204/6*13"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 204,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 6,
+                  "den": 1
+                }
+              },
+              {
+                "name": "每份量",
+                "role": "unknown"
+              },
+              {
+                "name": "份数",
+                "role": "known",
+                "value": {
+                  "num": 13,
+                  "den": 1
+                }
+              },
+              {
+                "name": "总量",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "每份量",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "已知份数"
+              },
+              {
+                "subject": "总量",
+                "reference": "每份量",
+                "predicate": "share",
+                "operator": "×",
+                "target": "份数"
+              }
+            ],
+            "targets": [
+              "总量"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "eval-130",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|known|13/1|-",
+            "已知份数|known|6/1|-",
+            "已知总量|known|204/1|千克",
+            "总量|unknown|-|-",
+            "每份量|unknown|-|-"
+          ],
+          "relations": [
+            "总量 share 每份量 × 份数",
+            "每份量 share 已知总量 ÷ 已知份数"
+          ],
+          "targets": [
+            "总量"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-130",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-134",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "hard",
+        "question_text": "15袋重1005千克，每袋67千克，求几袋",
+        "student_steps": [
+          "x=1005/67"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 1005,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "每份量",
+                "role": "known",
+                "value": {
+                  "num": 67,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 15,
+                  "den": 1
+                }
+              },
+              {
+                "name": "份数",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "份数",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "每份量"
+              }
+            ],
+            "targets": [
+              "份数"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "eval-134",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|unknown|-|-",
+            "已知份数|known|15/1|-",
+            "已知总量|known|1005/1|千克",
+            "每份量|known|67/1|千克"
+          ],
+          "relations": [
+            "份数 share 已知总量 ÷ 每份量"
+          ],
+          "targets": [
+            "份数"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-134",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-135",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "hard",
+        "question_text": "18车重810吨，每车45吨，求几车",
+        "student_steps": [
+          "x=810/45"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 810,
+                  "den": 1
+                },
+                "unit": "吨"
+              },
+              {
+                "name": "每份量",
+                "role": "known",
+                "value": {
+                  "num": 45,
+                  "den": 1
+                },
+                "unit": "吨"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 18,
+                  "den": 1
+                }
+              },
+              {
+                "name": "份数",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "份数",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "每份量"
+              }
+            ],
+            "targets": [
+              "份数"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "eval-135",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|unknown|-|-",
+            "已知份数|known|18/1|-",
+            "已知总量|known|810/1|吨",
+            "每份量|known|45/1|吨"
+          ],
+          "relations": [
+            "份数 share 已知总量 ÷ 每份量"
+          ],
+          "targets": [
+            "份数"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-135",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-136",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "hard",
+        "question_text": "12筐重936千克，每筐78千克，求几筐",
+        "student_steps": [
+          "x=936/78"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 936,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "每份量",
+                "role": "known",
+                "value": {
+                  "num": 78,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 12,
+                  "den": 1
+                }
+              },
+              {
+                "name": "份数",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "份数",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "每份量"
+              }
+            ],
+            "targets": [
+              "份数"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "eval-136",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|unknown|-|-",
+            "已知份数|known|12/1|-",
+            "已知总量|known|936/1|千克",
+            "每份量|known|78/1|千克"
+          ],
+          "relations": [
+            "份数 share 已知总量 ÷ 每份量"
+          ],
+          "targets": [
+            "份数"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-136",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-138",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "hard",
+        "question_text": "21袋重714千克，每袋34千克，求几袋",
+        "student_steps": [
+          "x=714/34"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 714,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "每份量",
+                "role": "known",
+                "value": {
+                  "num": 34,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 21,
+                  "den": 1
+                }
+              },
+              {
+                "name": "份数",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "份数",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "每份量"
+              }
+            ],
+            "targets": [
+              "份数"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "eval-138",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|unknown|-|-",
+            "已知份数|known|21/1|-",
+            "已知总量|known|714/1|千克",
+            "每份量|known|34/1|千克"
+          ],
+          "relations": [
+            "份数 share 已知总量 ÷ 每份量"
+          ],
+          "targets": [
+            "份数"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-138",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "eval-140",
+        "family": "normalize",
+        "group": "normalize_group",
+        "difficulty": "hard",
+        "question_text": "7筐重161千克，每筐23千克，求几筐",
+        "student_steps": [
+          "x=161/23"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "已知总量",
+                "role": "known",
+                "value": {
+                  "num": 161,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "每份量",
+                "role": "known",
+                "value": {
+                  "num": 23,
+                  "den": 1
+                },
+                "unit": "千克"
+              },
+              {
+                "name": "已知份数",
+                "role": "known",
+                "value": {
+                  "num": 7,
+                  "den": 1
+                }
+              },
+              {
+                "name": "份数",
+                "role": "unknown"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "份数",
+                "reference": "已知总量",
+                "predicate": "share",
+                "operator": "÷",
+                "target": "每份量"
+              }
+            ],
+            "targets": [
+              "份数"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "eval-140",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "份数|unknown|-|-",
+            "已知份数|known|7/1|-",
+            "已知总量|known|161/1|千克",
+            "每份量|known|23/1|千克"
+          ],
+          "relations": [
+            "份数 share 已知总量 ÷ 每份量"
+          ],
+          "targets": [
+            "份数"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "eval-140",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "seed-010",
+        "family": "multiple",
+        "group": "sumdiff_group",
+        "difficulty": "medium",
+        "question_text": "甲比乙的3倍少5个，甲和乙一共80个，求甲乙",
+        "student_steps": [
+          "3*x-5+x=80",
+          "4*x-5=80",
+          "4*x=80+5",
+          "x=(80+5)/4"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "甲",
+                "role": "unknown"
+              },
+              {
+                "name": "乙",
+                "role": "unknown"
+              },
+              {
+                "name": "乙的3倍",
+                "role": "unknown"
+              },
+              {
+                "name": "倍数",
+                "role": "known",
+                "value": {
+                  "num": 3,
+                  "den": 1
+                }
+              },
+              {
+                "name": "差量",
+                "role": "known",
+                "value": {
+                  "num": 5,
+                  "den": 1
+                },
+                "unit": "个"
+              },
+              {
+                "name": "总量",
+                "role": "known",
+                "value": {
+                  "num": 80,
+                  "den": 1
+                },
+                "unit": "个"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "甲",
+                "reference": "乙",
+                "predicate": "times",
+                "operator": "×",
+                "target": "倍数"
+              },
+              {
+                "subject": "乙的3倍",
+                "reference": "甲",
+                "predicate": "diff",
+                "operator": "-",
+                "target": "差量"
+              },
+              {
+                "subject": "甲",
+                "reference": "乙",
+                "predicate": "sum",
+                "operator": "+",
+                "target": "总量"
+              }
+            ],
+            "targets": [
+              "甲",
+              "乙"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "correct"
+            },
+            {
+              "index": 3,
+              "status": "correct"
+            },
+            {
+              "index": 4,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "seed-010",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "correct"
+          },
+          {
+            "index": 3,
+            "status": "correct"
+          },
+          {
+            "index": 4,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "乙|unknown|-|-",
+            "乙的3倍|unknown|-|-",
+            "倍数|known|3/1|-",
+            "差量|known|5/1|个",
+            "总量|known|80/1|个",
+            "甲|unknown|-|-"
+          ],
+          "relations": [
+            "乙的3倍 diff 甲 - 差量",
+            "甲 sum 乙 + 总量",
+            "甲 times 乙 × 倍数"
+          ],
+          "targets": [
+            "乙",
+            "甲"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "seed-010",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 4,
+          "denominator": 4
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "seed-030",
+        "family": "multiple",
+        "group": "sumdiff_group",
+        "difficulty": "medium",
+        "question_text": "甲比乙的2倍少6个，甲和乙一共50个，求甲乙",
+        "student_steps": [
+          "2*x-6+x=50",
+          "3*x-6=50",
+          "3*x=50+6",
+          "x=(50+6)/3"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "甲",
+                "role": "unknown"
+              },
+              {
+                "name": "乙",
+                "role": "unknown"
+              },
+              {
+                "name": "乙的2倍",
+                "role": "unknown"
+              },
+              {
+                "name": "倍数",
+                "role": "known",
+                "value": {
+                  "num": 2,
+                  "den": 1
+                }
+              },
+              {
+                "name": "差量",
+                "role": "known",
+                "value": {
+                  "num": 6,
+                  "den": 1
+                },
+                "unit": "个"
+              },
+              {
+                "name": "总量",
+                "role": "known",
+                "value": {
+                  "num": 50,
+                  "den": 1
+                },
+                "unit": "个"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "甲",
+                "reference": "乙",
+                "predicate": "times",
+                "operator": "×",
+                "target": "倍数"
+              },
+              {
+                "subject": "乙的2倍",
+                "reference": "甲",
+                "predicate": "diff",
+                "operator": "-",
+                "target": "差量"
+              },
+              {
+                "subject": "甲",
+                "reference": "乙",
+                "predicate": "sum",
+                "operator": "+",
+                "target": "总量"
+              }
+            ],
+            "targets": [
+              "甲",
+              "乙"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "correct"
+            },
+            {
+              "index": 3,
+              "status": "correct"
+            },
+            {
+              "index": 4,
+              "status": "correct"
+            }
+          ]
+        }
+      },
+      "outcome": {
+        "caseId": "seed-030",
+        "modeling": "ok",
+        "verdict": "correct",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "correct"
+          },
+          {
+            "index": 3,
+            "status": "correct"
+          },
+          {
+            "index": 4,
+            "status": "correct"
+          }
+        ],
+        "model": {
+          "entities": [
+            "乙|unknown|-|-",
+            "乙的2倍|unknown|-|-",
+            "倍数|known|2/1|-",
+            "差量|known|6/1|个",
+            "总量|known|50/1|个",
+            "甲|unknown|-|-"
+          ],
+          "relations": [
+            "乙的2倍 diff 甲 - 差量",
+            "甲 sum 乙 + 总量",
+            "甲 times 乙 × 倍数"
+          ],
+          "targets": [
+            "乙",
+            "甲"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "seed-030",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 4,
+          "denominator": 4
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "seed-033",
+        "family": "sumdiff",
+        "group": "sumdiff_group",
+        "difficulty": "easy",
+        "question_text": "甲和乙一共80个，甲比乙多10个，求甲和乙",
+        "student_steps": [
+          "x+10+x=80",
+          "2*x-10=80"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "甲",
+                "role": "unknown"
+              },
+              {
+                "name": "乙",
+                "role": "unknown"
+              },
+              {
+                "name": "总量",
+                "role": "known",
+                "value": {
+                  "num": 80,
+                  "den": 1
+                },
+                "unit": "个"
+              },
+              {
+                "name": "差量",
+                "role": "known",
+                "value": {
+                  "num": 10,
+                  "den": 1
+                },
+                "unit": "个"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "甲",
+                "reference": "乙",
+                "predicate": "sum",
+                "operator": "+",
+                "target": "总量"
+              },
+              {
+                "subject": "甲",
+                "reference": "乙",
+                "predicate": "diff",
+                "operator": "-",
+                "target": "差量"
+              }
+            ],
+            "targets": [
+              "甲",
+              "乙"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 2,
+            "classification": "knowledge",
+            "rule_id": "ALG.EQ.MOVE"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "seed-033",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "incorrect",
+            "error": {
+              "classification": "knowledge",
+              "ruleId": "ALG.EQ.MOVE"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "乙|unknown|-|-",
+            "差量|known|10/1|个",
+            "总量|known|80/1|个",
+            "甲|unknown|-|-"
+          ],
+          "relations": [
+            "甲 diff 乙 - 差量",
+            "甲 sum 乙 + 总量"
+          ],
+          "targets": [
+            "乙",
+            "甲"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "seed-033",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 2,
+          "denominator": 2
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "seed-034",
+        "family": "sumdiff",
+        "group": "sumdiff_group",
+        "difficulty": "easy",
+        "question_text": "苹果和橘子一共30个，苹果比橘子多4个，求苹果和橘子",
+        "student_steps": [
+          "x-4+x=30"
+        ],
+        "source": "photo",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "苹果",
+                "role": "unknown"
+              },
+              {
+                "name": "橘子",
+                "role": "unknown"
+              },
+              {
+                "name": "总量",
+                "role": "known",
+                "value": {
+                  "num": 30,
+                  "den": 1
+                },
+                "unit": "个"
+              },
+              {
+                "name": "差量",
+                "role": "known",
+                "value": {
+                  "num": 4,
+                  "den": 1
+                },
+                "unit": "个"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "苹果",
+                "reference": "橘子",
+                "predicate": "sum",
+                "operator": "+",
+                "target": "总量"
+              },
+              {
+                "subject": "苹果",
+                "reference": "橘子",
+                "predicate": "diff",
+                "operator": "-",
+                "target": "差量"
+              }
+            ],
+            "targets": [
+              "苹果",
+              "橘子"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "incorrect"
+            }
+          ],
+          "error": {
+            "step_index": 1,
+            "classification": "knowledge"
+          }
+        }
+      },
+      "outcome": {
+        "caseId": "seed-034",
+        "modeling": "ok",
+        "verdict": "incorrect",
+        "steps": [
+          {
+            "index": 1,
+            "status": "incorrect",
+            "error": {
+              "classification": "knowledge"
+            }
+          }
+        ],
+        "model": {
+          "entities": [
+            "差量|known|4/1|个",
+            "总量|known|30/1|个",
+            "橘子|unknown|-|-",
+            "苹果|unknown|-|-"
+          ],
+          "relations": [
+            "苹果 diff 橘子 - 差量",
+            "苹果 sum 橘子 + 总量"
+          ],
+          "targets": [
+            "橘子",
+            "苹果"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "seed-034",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "m2": {
+          "hit": true,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    },
+    {
+      "case": {
+        "id": "seed-039",
+        "family": "sumdiff",
+        "group": "sumdiff_group",
+        "difficulty": "easy",
+        "question_text": "甲和乙一共80个，甲比乙多10个，求甲和乙",
+        "student_steps": [
+          "x+10+x=80",
+          "2*x+10=80",
+          "2*x=80-10",
+          "所以结果直接写出来"
+        ],
+        "source": "manual",
+        "annotation": {
+          "modeling": "ok",
+          "expected_model": {
+            "entities": [
+              {
+                "name": "甲",
+                "role": "unknown"
+              },
+              {
+                "name": "乙",
+                "role": "unknown"
+              },
+              {
+                "name": "总量",
+                "role": "known",
+                "value": {
+                  "num": 80,
+                  "den": 1
+                },
+                "unit": "个"
+              },
+              {
+                "name": "差量",
+                "role": "known",
+                "value": {
+                  "num": 10,
+                  "den": 1
+                },
+                "unit": "个"
+              }
+            ],
+            "relations": [
+              {
+                "subject": "甲",
+                "reference": "乙",
+                "predicate": "sum",
+                "operator": "+",
+                "target": "总量"
+              },
+              {
+                "subject": "甲",
+                "reference": "乙",
+                "predicate": "diff",
+                "operator": "-",
+                "target": "差量"
+              }
+            ],
+            "targets": [
+              "甲",
+              "乙"
+            ]
+          },
+          "steps": [
+            {
+              "index": 1,
+              "status": "correct"
+            },
+            {
+              "index": 2,
+              "status": "correct"
+            },
+            {
+              "index": 3,
+              "status": "correct"
+            },
+            {
+              "index": 4,
+              "status": "not_judged"
+            }
+          ]
+        },
+        "excluded": "invalid_expr"
+      },
+      "outcome": {
+        "caseId": "seed-039",
+        "modeling": "ok",
+        "verdict": "partial",
+        "fallbackExitCode": "INVALID_EXPR",
+        "steps": [
+          {
+            "index": 1,
+            "status": "correct"
+          },
+          {
+            "index": 2,
+            "status": "correct"
+          },
+          {
+            "index": 3,
+            "status": "correct"
+          },
+          {
+            "index": 4,
+            "status": "not_judged"
+          }
+        ],
+        "model": {
+          "entities": [
+            "乙|unknown|-|-",
+            "差量|known|10/1|个",
+            "总量|known|80/1|个",
+            "甲|unknown|-|-"
+          ],
+          "relations": [
+            "甲 diff 乙 - 差量",
+            "甲 sum 乙 + 总量"
+          ],
+          "targets": [
+            "乙",
+            "甲"
+          ]
+        }
+      },
+      "compare": {
+        "caseId": "seed-039",
+        "modelingHit": true,
+        "m1": {
+          "numerator": 0,
+          "denominator": 0
+        },
+        "m2": {
+          "hit": null,
+          "overJudged": 0
+        },
+        "m3b": {
+          "hit": true
+        }
+      },
+      "consistent": true
+    }
+  ]
+}

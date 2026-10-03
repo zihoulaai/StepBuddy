@@ -16,3 +16,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run ci
+      # 评测回归门禁（Task 9.4）：规则/话术/提示词/评测集变更即全量回归，
+      # 四项指标任一跌破基线 2 个百分点或 M-6 双跑不一致 → 红
+      - run: npm run eval --workspace @stepbuddy/eval --if-present

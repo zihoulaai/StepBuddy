@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "total": 150,
+  "metrics": {
+    "modelingSuccessRate": 1,
+    "m1Rate": 1,
+    "m2Rate": 1,
+    "m3bRate": 1
+  },
+  "note": "由 npm run eval --workspace @stepbuddy/eval -- --update-baseline 生成；禁手改"
+}
